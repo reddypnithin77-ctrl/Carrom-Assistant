@@ -63,9 +63,6 @@ private class CarromBoardView(
     private val report: (String) -> Unit
 ) : View(context) {
     private data class Coin(var x: Float, var y: Float, val red: Boolean)
-    private data class Shot(val coin: Coin, val pocketX: Float, val pocketY: Float,
-                            val contactX: Float, val contactY: Float, val score: Float)
-
     private val wood = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFB87943.toInt() }
     private val surface = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFE8C99A.toInt() }
     private val line = Paint(Paint.ANTI_ALIAS_FLAG).apply {
