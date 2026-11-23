@@ -5,6 +5,9 @@ import android.app.Activity
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.PathEffect
+import android.graphics.DashPathEffect
+import android.view.MotionEvent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -73,6 +76,20 @@ private class CarromBoardView(
     private val black = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFF30343B.toInt() }
     private val red = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFC83E45.toInt() }
     private val strikerPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFF3B83D5.toInt() }
+    private val aimPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.WHITE; strokeWidth = 3f; style = Paint.Style.STROKE
+        pathEffect = DashPathEffect(floatArrayOf(10f, 7f), 0f)
+    }
+    private val dottedPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.WHITE; strokeWidth = 4f; style = Paint.Style.STROKE
+        pathEffect = DashPathEffect(floatArrayOf(2f, 9f), 0f)
+    }
+    private val impactPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = 0xCCFFFFFF.toInt(); strokeWidth = 2f; style = Paint.Style.STROKE
+    }
+    private var aimActive = false
+    private var aimEndX = 0.5f
+    private var aimEndY = 0.25f
     private val pockets = listOf(0.07f to 0.07f, 0.93f to 0.07f, 0.07f to 0.93f, 0.93f to 0.93f)
     private val coins = mutableListOf<Coin>()
     private var strikerX = 0.5f
