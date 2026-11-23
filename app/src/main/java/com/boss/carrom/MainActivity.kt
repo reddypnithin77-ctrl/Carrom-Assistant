@@ -20,7 +20,7 @@ class MainActivity : Activity() {
             setBackgroundColor(0xFF171717.toInt())
         }
         root.addView(TextView(this).apply {
-            text = "BOSS • CARROM ASSISTANT\n\nManual aiming companion"
+            text = "BOSS • CARROM ASSISTANT\n\nCarrom practice and simulation"
             textSize = 23f
             setTextColor(0xFFFFFFFF.toInt())
             gravity = Gravity.CENTER
@@ -31,6 +31,10 @@ class MainActivity : Activity() {
             textSize = 16f
             setTextColor(0xFFE0E0E0.toInt())
             setPadding(8, 8, 8, 24)
+        })
+        root.addView(Button(this).apply {
+            text = "Open automatic carrom simulator"
+            setOnClickListener { startActivity(Intent(this@MainActivity, CarromSimulatorActivity::class.java)) }
         })
         root.addView(Button(this).apply {
             text = "Enable floating aiming guide"
