@@ -12,10 +12,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import kotlin.math.abs
 import kotlin.math.atan2
 import kotlin.math.hypot
 import kotlin.math.min
-import kotlin.math.sqrt
 
 class CarromSimulatorActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
