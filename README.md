@@ -5,10 +5,10 @@ A standalone Android companion for manual carrom aiming practice.
 ## Scope
 
 - Floating, draggable aiming guide.
-- Manual aiming-line adjustment.
+- Manually adjustable aiming line with a live angle readout in degrees.
 - Practice mode labels: own-colour, own-colour plus queen, and free-style.
 
-This project does not inject into or modify a game, automate shots, read game memory, or bypass anti-cheat systems. The aiming guide is manually controlled and does not claim automatic board recognition or shot calculation.
+The angle is calculated from the direction of the line the user positions in the guide. The app does not recognize the board, choose a target, fire shots, inject into or modify a game, read game memory, or bypass anti-cheat systems.
 
 ## Build
 
