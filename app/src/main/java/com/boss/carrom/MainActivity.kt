@@ -20,20 +20,20 @@ class MainActivity : Activity() {
             setBackgroundColor(0xFF171717.toInt())
         }
         root.addView(TextView(this).apply {
-            text = "BOSS • CARROM ASSISTANT\n\nCarrom practice and simulation"
+            text = "BOSS • CARROM ASSISTANT\n\nCarrom practice and manual aiming"
             textSize = 23f
             setTextColor(0xFFFFFFFF.toInt())
             gravity = Gravity.CENTER
             setPadding(8, 8, 8, 30)
         })
         root.addView(TextView(this).apply {
-            text = "Practice modes\n• Own colour only\n• Own colour + queen\n• Free style\n\nThe floating guide lets you position the aiming line manually and calculates its angle live in degrees."
+            text = "Offline manual practice board\n• Drag from the striker to set your aim\n• See the projected path and possible coin contact\n• Live angle and pull-distance readout\n\nThe practice board does not play shots automatically or interact with online matches."
             textSize = 16f
             setTextColor(0xFFE0E0E0.toInt())
             setPadding(8, 8, 8, 24)
         })
         root.addView(Button(this).apply {
-            text = "Open automatic carrom simulator"
+            text = "Open manual aim practice"
             setOnClickListener { startActivity(Intent(this@MainActivity, CarromSimulatorActivity::class.java)) }
         })
         root.addView(Button(this).apply {
